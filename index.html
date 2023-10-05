@@ -7,42 +7,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Bootstrap CSS v5.3 -->
+    <link href="/css/main.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100&family=Water+Brush&display=swap"
         rel="stylesheet">
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
 </head>
 
-<style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        background: #F9F9F9;
-        color: #4C3451;
-    }
-
-    .navbar {
-        background: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-link:hover {
-        background: #F1F2F5;
-        border-radius: 8px;
-        padding: 8px 16px;
-    }
-
-    .nav-link.active {
-        background: #FFF9E7;
-        border-radius: 8px;
-        padding: 8px 16px;
-    }
-</style>
 
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar px-3">
+        <!-- Brand and Navigation Links -->
+
         <div class="d-flex align-items-center gap-3">
+            <!-- Brand Logo -->
+
             <div class="navbar-header d-flex align-items-center">
                 <a class="navbar-brand" href="#">
                     <img src="images/logo.svg" alt="logo">
@@ -51,26 +35,34 @@
                     <div class="vr"></div>
                 </div>
             </div>
+            <!-- Navigation Links -->
 
             <div class="d-none d-lg-flex gap-2">
+                <!-- Home Link -->
                 <a class="nav-link active px-2 py-1 rounded" aria-current="page" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/home.svg" alt="Home" class="mr-2">
                         <p class="m-0 px-1">Home</p>
                     </div>
                 </a>
+                <!-- Course Link -->
+
                 <a class="nav-link px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/edu.svg" alt="Course" class="mr-2">
                         <p class="m-0 px-1">Course</p>
                     </div>
                 </a>
+                <!-- Review Link -->
+
                 <a class="nav-link px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/review.svg" alt="Review" class="mr-2">
                         <p class="m-0 px-1">Review</p>
                     </div>
                 </a>
+                <!-- Assignments Link -->
+
                 <a class="nav-link px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/book.svg" alt="Assignments" class="mr-2">
@@ -80,46 +72,107 @@
             </div>
         </div>
 
+        <!-- User Information and Actions -->
         <div class="d-flex justify-content-between gap-3">
+            <!-- User Stats and Avatar -->
             <div class="container">
+                <!-- User Stats Section -->
                 <div class="row">
                     <div class="col d-flex flex-column align-items-center justify-content-center">
                         <div class="d-flex align-items-center">
                             <img src="images/icons/honey.svg" alt="" class="mr-2">
-                            <span class="fw-bold">59</span>
+                            <p class="fw-bold">59</p>
                         </div>
                     </div>
                     <div class="col d-flex flex-column align-items-center justify-content-center">
                         <img src="images/course.svg" alt="" class="img-fluid">
                     </div>
-                    <div class="col d-flex flex-column align-items-center justify-content-center">
-                        <img src="images/avatar.svg" alt="" class="img-fluid">
+
+                    <!-- User Dropdown for Settings -->
+                    <div x-data="{ show: false }" @click.away="show = false"
+                        class="col d-flex flex-column align-items-center justify-content-center"
+                        style="position: relative;">
+                        <div>
+                            <button @click="show = !show" style="background: transparent; border: 0;"> <img
+                                    src="images/avatar.svg" alt="" class="img-fluid"></button>
+                        </div>
+
+                        <!-- Dropdown Content -->
+                        <div x-show="show" @click="show = false" class="rounded border p-2"
+                            style="width: 236px; position: absolute; top: 130%; right: 0; background: white;">
+                            <!-- Profile Link -->
+                            <a href="#" class="text-secondary text-decoration-none">
+                                <div class="_dropdown-item rounded d-flex align-items-center gap-2">
+                                    <img src="images/profile.svg" alt="" style="width: 24px">
+                                    <p>Profile</p>
+                                </div>
+                            </a>
+                            <!-- Settings Link -->
+                            <a href="#" class="text-secondary text-decoration-none">
+                                <div class="_dropdown-item rounded d-flex align-items-center gap-2">
+                                    <img src="images/settings.svg" alt="" style="width: 24px">
+                                    <p>Settings</p>
+                                </div>
+                            </a>
+                            <!-- Redeem Coupon Link -->
+                            <a href="#" class="text-secondary text-decoration-none">
+                                <div class="_dropdown-item rounded d-flex align-items-center gap-2">
+                                    <img src="images/copon.svg" alt="" style="width: 24px">
+                                    <p>Redeem Coupon</p>
+                                </div>
+                            </a>
+                            <!-- Invite Friend Link -->
+                            <a href="#" class="text-secondary text-decoration-none">
+                                <div class="_dropdown-item rounded d-flex align-items-center gap-2">
+                                    <img src="images/invite.svg" alt="" style="width: 24px">
+                                    <p>Invite Friend</p>
+                                </div>
+                            </a>
+                            <!-- Divider Line -->
+                            <div class="my-1 d-flex justify-content-center">
+                                <hr class="hr m-0 w-75" />
+                            </div>
+                            <!-- Logout Link -->
+                            <a href="#" class="text-secondary text-decoration-none">
+                                <div class="_dropdown-item rounded d-flex align-items-center gap-2">
+                                    <img src="images/logout.svg" alt="" style="width: 24px; height: 24px;">
+                                    <p style="color: #68556C;">Log Out</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
+
+    <!-- Main Content -->
     <main class="mt-3 mb-5 ">
-        <div class="container">
+        <div class="container-fluid px-4">
+            <!-- Stories Section -->
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-xl-4 offset-sm-0 offset-md-0 offset-xl-2 gap-2">
+                <div class="col-sm-6 col-lg-5 col-xl-4 offset-lg-1 offset-sm-0 offset-xl-2">
                     <img src="images/stroy-1.svg" alt="" srcset="">
                     <img src="images/stroy-2.svg" alt="" srcset="">
                     <img src="images/stroy-3.svg" alt="" srcset="">
                 </div>
             </div>
+
+            <!-- Course and Teaching Aids Section -->
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-xl-4 offset-sm-0 offset-md-0 offset-xl-2">
+                <div class="col-sm-6 col-lg-5 col-xl-4 offset-lg-1 offset-sm-0 offset-xl-2">
+                    <!-- Your Course Section -->
                     <div class="_course mt-3">
-                        <span style="color: #68556C;">Your Course</span>
+                        <p style="color: #68556C;">Your Course</p>
                         <div class="_courses-card p-4 rounded" style="background-color: #FFF9E7;">
+                            <!-- Course Progress -->
                             <div class="_progress">
                                 <div class="_illustration-text d-flex align-items-center">
                                     <img src="images/progress.svg" alt="">
                                     <div class="_title-progress flex-grow-1 ms-4">
                                         <div class="d-flex justify-content-between">
-                                            <span>Current Course</span>
+                                            <p class="m-0">Current Course</p>
                                             <div>
                                                 <a class="fw-bold text-decoration-none" href="#"
                                                     style="color: #4C3451;">See all</a>
@@ -131,6 +184,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Course Level and Progress Bar -->
                                 <div class="_level flex-grow-1 mt-3">
                                     <h4 class="fw-bold">A0 - Beginner</h4>
                                     <img class="w-100" src="images/progressBar.svg">
@@ -138,14 +192,18 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Teaching Aids Section -->
                     <div class="_course mt-3">
-                        <span style="color: #68556C;">Teaching aids</span>
+                        <p style="color: #68556C;">Teaching aids</p>
                         <div class="_teaching-aids-card mt-2">
                             <div class="_teaching-aids d-flex gap-4">
+                                <!-- Audio Teaching Aid -->
                                 <div>
                                     <img src="images/TeachingAids/1.svg" alt="">
                                     <h4 class="fw-bold mt-3">Audio</h4>
                                 </div>
+                                <!-- Review Teaching Aid -->
                                 <div>
                                     <img src="images/TeachingAids/1.svg" alt="">
                                     <h4 class="fw-bold mt-3">Review</h4>
@@ -153,39 +211,47 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Challenges Section -->
                     <div class="_challenges mt-3">
-                        <span style="color: #68556C;">Challenges</span>
+                        <p style="color: #68556C;">Challenges</p>
+
+                        <!-- Monthly Challenge Card -->
                         <div class="_cards mt-2 rounded" style="background: white;">
                             <div class="_card p-4">
-                                <div class="_illustration-text d-flex justify-content-between">
+                                <div class="_illustration-text d-flex justify-content-between gap-3">
                                     <img src="images/icons/cup.svg" alt="">
-                                    <div class="_title-subtitle">
+                                    <div class="_title-subtitle flex-grow-1">
                                         <h4 class="fw-bold">AlifBee Monthly Challenge</h4>
-                                        <span>We have a new contest can you check</span>
+                                        <p>We have a new contest can you check</p>
                                     </div>
                                     <img src="images/icons/stars.svg" alt="">
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Self Assessment Card -->
                         <div class="_cards mt-2 rounded mt-3" style="background: #F1F2F5;">
                             <div class="_card p-4">
-                                <div class="_illustration-text d-flex justify-content-between">
+                                <div class="_illustration-text d-flex justify-content-between gap-3">
                                     <img src="images/icons/task.svg" alt="">
-                                    <div class="_title-subtitle">
+                                    <div class="_title-subtitle flex-grow-1">
                                         <h4 class="fw-bold">Self assessment</h4>
-                                        <span>Time to test you in Arabic language</span>
+                                        <p>Time to test you in Arabic language</p>
                                     </div>
                                     <img src="images/icons/stars.svg" alt="">
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Training by AI Card -->
                         <div class="_cards mt-2 rounded mt-3" style="background: white;">
                             <div class="_card p-4">
-                                <div class="_illustration-text d-flex justify-content-between">
+                                <div class="_illustration-text d-flex justify-content-between gap-3">
                                     <img src="images/icons/ai.svg" alt="">
-                                    <div class="_title-subtitle">
-                                        <h4 class="fw-bold">Training By AI</h4>
-                                        <span>Time to test you in Arabic language</span>
+                                    <div class="_title-subtitle flex-grow-1">
+                                        <h4 class="fw-bold ">Training By AI</h4>
+                                        <p>Time to test you in Arabic language</p>
                                     </div>
                                     <img src="images/icons/stars.svg" alt="">
                                 </div>
@@ -194,31 +260,40 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-md-6 col-xl-4">
+                <!-- Statistic and Offers Section -->
+                <div class="col-sm-6 col-lg-5 col-xl-4">
+                    <!-- Statistic Section -->
                     <div class="_statistic mt-3">
-                        <span style="color: #68556C;">Statistic</span>
+                        <p style="color: #68556C;">Statistic</p>
+                        <!-- Progress Learned Items Card -->
                         <div class="_card mt-2 rounded" style="background: white;">
                             <div class="_card p-4">
                                 <div class="_illustration-text">
+                                    <!-- Progress Icon and Title -->
                                     <div class="_icon-title d-flex gap-2">
                                         <img src="images/icons/review.svg" alt="">
-                                        <span class="fw-bold">Progress Learned Items</span>
+                                        <p class="fw-bold">Progress Learned Items</p>
                                     </div>
+                                    <!-- Progress Graph -->
                                     <div class="_graph">
                                         <img class="w-100" src="images/graph.svg" alt="">
                                     </div>
+                                    <!-- Main Content with Days in a Row -->
                                     <div class="_main-content d-flex flex-column gap-3">
+                                        <!-- Days in a Row -->
                                         <div class="_icon-title d-flex justify-content-between align-items-center">
                                             <div>
                                                 <img src="images/icons/thunder.svg" alt="">
-                                                <span class="fw-bold">Days in a Row</span>
+                                                <p class="d-inline fw-bold">Days in a Row</p>
                                             </div>
+                                            <!-- Thunder Icon and Days Count -->
                                             <span class="fw-bold px-1 py-1 rounded-pill"
                                                 style="background-color: #FFF0C2;">
                                                 <span class="fw-bold px-3 py-1 rounded-pill"
                                                     style="background: #FECD34;">88</span>
                                             </span>
                                         </div>
+                                        <!-- Days of the Week with Thunder Icon -->
                                         <div class="_days d-flex justify-content-between">
                                             <div class="_day">
                                                 <span class="d-block text-center mb-2">Mon</span>
@@ -272,9 +347,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Divider Line -->
                                     <hr class="hr" />
-
+                                    <!-- Active Days and Longest Steak -->
                                     <div class="_calender d-flex justify-content-between">
+                                        <!-- Active Days -->
                                         <div class="_active-days d-flex gap-3">
                                             <img src="images/icons/calenderWithBG.svg" alt="">
                                             <div>
@@ -282,6 +359,7 @@
                                                 <span>Active Days</span>
                                             </div>
                                         </div>
+                                        <!-- Longest Steak -->
                                         <div class="_active-days d-flex gap-3">
                                             <img src="images/icons/medal.svg" alt="">
                                             <div>
@@ -295,8 +373,11 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Additional Challenges Section -->
                     <div class="_challenges mt-3">
                         <span style="color: #68556C;">Challenges</span>
+                        <!-- Go Premium Card -->
                         <div class="_cards mt-2 rounded" style="background: #FFF0C2;">
                             <div class="_card p-4">
                                 <div class="_illustration-text d-flex">
@@ -308,6 +389,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- AlifBee Academy Card -->
                         <div class="_cards mt-2 rounded mt-3" style="background: #FFF9E7;">
                             <div class="_card p-4">
                                 <div class="_illustration-text d-flex">
@@ -324,9 +406,12 @@
             </div>
         </div>
         </div>
+
+        <!-- Mobile Navigation -->
         <div class="fixed-bottom w-100 d-block d-lg-none p-3 border-top"
             style="background: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
             <div class="d-flex gap-3 justify-content-center">
+                <!-- Home Link -->
                 <a class="nav-link active px-2 py-1 rounded" aria-current="page" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/home.svg" alt="Home" class="mr-2">
@@ -335,6 +420,7 @@
                         </div>
                     </div>
                 </a>
+                <!-- Course Link -->
                 <a class="nav-link px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/edu.svg" alt="Course" class="mr-2">
@@ -343,6 +429,7 @@
                         </div>
                     </div>
                 </a>
+                <!-- Review Link -->
                 <a class="nav-link px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/review.svg" alt="Review" class="mr-2">
@@ -351,6 +438,7 @@
                         </div>
                     </div>
                 </a>
+                <!-- Assignments Link -->
                 <a class="nav-link px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/book.svg" alt="Assignments" class="mr-2">
