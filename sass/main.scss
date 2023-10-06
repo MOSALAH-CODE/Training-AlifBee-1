@@ -1,7 +1,24 @@
 $primary: #fecd34;
 $secondary: #4c3451;
+$light: #f9f9f9;
+
+// Custom colors
+$primary-alt: #fff9e7;
+$primary-second: #fff0c2;
+$light-alt: #f1f2f5;
 $secondary-alt: #68556c;
 
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "primary-alt": $primary-alt,
+  "primary-second": $primary-second,
+  "light-alt": $light-alt,
+  "secondary-alt": $secondary-alt,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
 // import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -11,7 +28,7 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #f9f9f9;
+  background: $light;
   color: #4c3451;
   font-size: 1rem;
 }
@@ -28,7 +45,7 @@ body {
 }
 
 .nav-link.active {
-  background: #fff9e7;
+  background: $primary-alt;
   border-radius: 8px;
   padding: 8px 16px;
 }
@@ -37,7 +54,7 @@ body {
 }
 
 ._dropdown-item:hover {
-  background: #f1f2f5;
+  background: $light-alt;
   padding: 8px 16px;
 }
 
@@ -45,47 +62,55 @@ p {
   margin-bottom: 0;
 }
 
-@media (min-width: 576px) {
-  body {
-    font-size: 0.65rem;
-  }
+.bg-hover-light-alt:hover {
+  background-color: $light-alt !important;
 }
 
-@media (min-width: 800px) {
-  body {
-    font-size: 0.7rem;
-  }
-}
+// img {
+//   width: 100%;
+// }
 
-@media (min-width: 1000px) {
-  body {
-    font-size: 0.8rem;
-  }
-}
+// @media (min-width: 576px) {
+//   body {
+//     font-size: 0.65rem;
+//   }
+// }
 
-@media (min-width: 1400px) {
-  body {
-    font-size: 1rem;
-  }
-}
+// @media (min-width: 800px) {
+//   body {
+//     font-size: 0.7rem;
+//   }
+// }
 
-@media (min-width: 1800px) {
-  body {
-    font-size: 1.2rem;
-  }
-}
+// @media (min-width: 1000px) {
+//   body {
+//     font-size: 0.8rem;
+//   }
+// }
 
-@media (min-width: 2000px) {
-  body {
-    font-size: 1.4rem;
-  }
-}
+// @media (min-width: 1400px) {
+//   body {
+//     font-size: 1rem;
+//   }
+// }
 
-@media (max-width: 1110px) {
-  h4 {
-    font-size: 1.2rem;
-  }
-}
+// @media (min-width: 1800px) {
+//   body {
+//     font-size: 1.2rem;
+//   }
+// }
+
+// @media (min-width: 2000px) {
+//   body {
+//     font-size: 1.4rem;
+//   }
+// }
+
+// @media (max-width: 1110px) {
+//   h4 {
+//     font-size: 1.2rem;
+//   }
+// }
 
 // @media (max-width: 768px) {
 //   h1 {
