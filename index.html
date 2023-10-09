@@ -9,19 +9,15 @@
 
     <!-- Bootstrap CSS v5.3 -->
     <link href="/css/main.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@100&family=Water+Brush&display=swap"
-        rel="stylesheet">
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 </head>
 
 
-<body>
+<body class="bg-light text-secondary">
     <!-- Navigation Bar -->
-    <nav class="navbar px-3 flex-nowrap">
+    <nav class="navbar px-3 flex-nowrap bg-white shadow-sm">
         <!-- Brand and Navigation Links -->
 
         <div class="d-flex align-items-center gap-3">
@@ -39,31 +35,31 @@
             <!-- Navigation Links -->
             <div class="d-none d-lg-flex gap-2">
                 <!-- Home Link -->
-                <a class="nav-link active px-2 py-1 rounded" aria-current="page" href="#">
+                <a class="nav-link bg-primary-alt active px-2 py-1 rounded" aria-current="page" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/home.svg" alt="Home" class="mr-2">
-                        <p class="m-0 px-1">Home</p>
+                        <p class="m-0 px-1 fw-bold">Home</p>
                     </div>
                 </a>
                 <!-- Course Link -->
-                <a class="nav-link px-2 py-1 rounded" href="#">
+                <a class="nav-link bg-hover-light-alt px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/edu.svg" alt="Course" class="mr-2">
-                        <p class="m-0 px-1">Course</p>
+                        <p class="m-0 px-1 fw-bold">Course</p>
                     </div>
                 </a>
                 <!-- Review Link -->
-                <a class="nav-link px-2 py-1 rounded" href="#">
+                <a class="nav-link bg-hover-light-alt px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/review.svg" alt="Review" class="mr-2">
-                        <p class="m-0 px-1">Review</p>
+                        <p class="m-0 px-1 fw-bold">Review</p>
                     </div>
                 </a>
                 <!-- Assignments Link -->
-                <a class="nav-link px-2 py-1 rounded" href="#">
+                <a class="nav-link bg-hover-light-alt px-2 py-1 rounded" href="#">
                     <div class="d-flex align-items-center">
                         <img src="images/icons/book.svg" alt="Assignments" class="mr-2">
-                        <p class="m-0 px-1">Assignments</p>
+                        <p class="m-0 px-1 fw-bold">Assignments</p>
                     </div>
                 </a>
             </div>
@@ -145,21 +141,21 @@
 
 
     <!-- Main Content -->
-    <main class="mt-3 mb-5 ">
+    <main class="mt-4 mb-5 ">
         <div class="container">
             <!-- Stories Section -->
             <div class="row">
                 <div class="col">
-                    <img src="images/stroy-1.svg" alt="" srcset="">
-                    <img src="images/stroy-2.svg" alt="" srcset="">
-                    <img src="images/stroy-3.svg" alt="" srcset="">
+                    <img class="img-fluid" src="images/stroy-1.svg" alt="" srcset="">
+                    <img class="img-fluid" src="images/stroy-2.svg" alt="" srcset="">
+                    <img class="img-fluid" src="images/stroy-3.svg" alt="" srcset="">
                 </div>
             </div>
 
             <!-- Course and Teaching Aids Section -->
-            <div class="row mt-2 gap-2 gap-md-0">
-                <div class="col-md-6">
-                    <div class="container d-grid gap-2">
+            <div class="row mt-4 gap-2 gap-lg-0">
+                <div class="col-12 col-lg-6">
+                    <div class="container d-grid gap-4">
                         <!-- Your Course Section -->
                         <div class="row">
                             <div class="container d-grid gap-2">
@@ -168,29 +164,29 @@
                                 </div>
                                 <div class="row p-4 bg-primary-alt rounded">
                                     <div class="container d-grid gap-2">
-                                        <div class="row">
+                                        <div class="d-flex gap-4">
                                             <!-- Illustration text -->
-                                            <div class="col-3">
-                                                <img class="w-100" src="images/progress.svg" alt="">
+                                            <div class="">
+                                                <img class="img-fluid" src="images/progress.svg" alt="">
                                             </div>
-                                            <div class="col">
+                                            <div class="w-100">
                                                 <div class="d-flex justify-content-between">
-                                                    <p class="m-0">Current Course</p>
+                                                    <p class="m-0 fw-bold fs-6">Current Course</p>
                                                     <div>
-                                                        <a class="fw-bold text-decoration-none" href="#"
-                                                            style="color: #4C3451;">See all</a>
+                                                        <a class="fw-bold text-decoration-none text-secondary _subtitle"
+                                                            href="#">See all</a>
                                                         <img src="images/icons/arrow.svg" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="mt-2">
-                                                    <h4 class="fw-bold">Arabic Mastery</h4>
+                                                    <h3 class="fw-bold">Arabic Mastery</h3>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <!-- Course Level and Progress Bar -->
                                             <div class="_level flex-grow-1 mt-3">
-                                                <h4 class="fw-bold">A0 - Beginner</h4>
+                                                <h3 class="fw-bold">A0 - Beginner</h3>
                                                 <img class="w-100" src="images/progressBar.svg">
                                             </div>
                                         </div>
@@ -205,14 +201,14 @@
                                 <div class="row">
                                     <p class="p-0 text-secondary-alt">Teaching aids</p>
                                 </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img class="w-100" src="images/TeachingAids/1.svg" alt="">
-                                        <h4 class="fw-bold mt-3">Audio</h4>
+                                <div class="d-flex gap-4">
+                                    <div>
+                                        <img class="img-fluid" src="images/TeachingAids/1.svg" alt="">
+                                        <h3 class="fw-bold mt-3">Audio</h3>
                                     </div>
-                                    <div class="col-4">
-                                        <img class="w-100" src="images/TeachingAids/1.svg" alt="">
-                                        <h4 class="fw-bold mt-3">Review</h4>
+                                    <div>
+                                        <img class="img-fluid" src="images/TeachingAids/1.svg" alt="">
+                                        <h3 class="fw-bold mt-3">Review</h3>
                                     </div>
                                 </div>
                             </div>
@@ -220,58 +216,51 @@
 
                         <!-- Challenges Section -->
                         <div class="row">
-                            <div class="container d-grid gap-2">
-                                <div class="row">
-                                    <p class="p-0 text-secondary-alt">Challenges</p>
-                                </div>
+                            <p class="p-0 text-secondary-alt">Challenges</p>
+
+                            <div class="container d-grid gap-4 mt-2">
                                 <div class="row">
                                     <!-- Monthly Challenge Card -->
                                     <div class="container rounded p-4 bg-white bg-hover-light-alt">
-                                        <div class="row align-items-center">
-                                            <div class="col-2">
-                                                <img class="w-100" src="images/icons/cup.svg" alt="">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3">
+                                                <img class="img-fluid" src="images/icons/cup.svg" alt="">
+                                                <div class="">
+                                                    <h4 class="fw-bold">AlifBee Monthly Challenge</h4>
+                                                    <p>We have a new contest can you check</p>
+                                                </div>
                                             </div>
-                                            <div class="col-8">
-                                                <h4 class="fw-bold">AlifBee Monthly Challenge</h4>
-                                                <p>We have a new contest can you check</p>
-                                            </div>
-                                            <div class="col-2">
-                                                <img class="w-75" src="images/icons/stars.svg" alt="">
-                                            </div>
+                                            <img class="img-fluid" src="images/icons/stars.svg" alt="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <!-- Self Assessment Card -->
                                     <div class="container rounded p-4 bg-white bg-hover-light-alt">
-                                        <div class="row align-items-center">
-                                            <div class="col-2">
-                                                <img class="w-100" src="images/icons/task.svg" alt="">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3">
+                                                <img class="img-fluid" src="images/icons/task.svg" alt="">
+                                                <div class="">
+                                                    <h4 class="fw-bold">Self assessment</h4>
+                                                    <p>Time to test you in Arabic language</p>
+                                                </div>
                                             </div>
-                                            <div class="col-8">
-                                                <h4 class="fw-bold">Self assessment</h4>
-                                                <p>Time to test you in Arabic language</p>
-                                            </div>
-                                            <div class="col-2">
-                                                <img class="w-75" src="images/icons/stars.svg" alt="">
-                                            </div>
+                                            <img class="img-fluid" src="images/icons/stars.svg" alt="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <!-- Training by AI Card -->
                                     <div class="container rounded p-4 bg-white bg-hover-light-alt">
-                                        <div class="row align-items-center">
-                                            <div class="col-2">
-                                                <img class="w-100" src="images/icons/ai.svg" alt="">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3">
+                                                <img class="img-fluid" src="images/icons/ai.svg" alt="">
+                                                <div class="">
+                                                    <h4 class="fw-bold">Training By AI</h4>
+                                                    <p>Time to test you in Arabic language</p>
+                                                </div>
                                             </div>
-                                            <div class="col-8">
-                                                <h4 class="fw-bold ">Training By AI</h4>
-                                                <p>Time to test you in Arabic language</p>
-                                            </div>
-                                            <div class="col-2">
-                                                <img class="w-75" src="images/icons/stars.svg" alt="">
-                                            </div>
+                                            <img class="img-fluid" src="images/icons/stars.svg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -281,8 +270,8 @@
                 </div>
 
                 <!-- Statistic and Offers Section -->
-                <div class="col-md-6">
-                    <div class="container d-grid gap-2">
+                <div class="col">
+                    <div class="container d-grid gap-4 h-100">
                         <!-- Statistic Section -->
                         <div class="row">
                             <div class="container d-grid gap-2">
@@ -295,55 +284,54 @@
                                         <!-- Progress Icon and Title -->
                                         <div class="row">
                                             <div class="d-flex gap-3 flex-nowrap">
-                                                <img src="images/icons/review.svg" alt="">
-                                                <p class="fw-bold">Progress Learned Items</p>
+                                                <img class="img-fluid" width="36px" src="images/icons/review.svg"
+                                                    alt="">
+                                                <h3 class="fw-bold">Progress Learned Items</h3>
                                             </div>
                                         </div>
 
                                         <!-- Progress Graph -->
-                                        <div class="row">
-                                            <img class="w-100" src="images/graph.svg" alt="">
+                                        <div class="d-flex justify-content-center">
+                                            <img class="img-fluid" src="images/graph.svg" alt="">
                                         </div>
 
-                                        <div class="row">
+                                        <div class="row mt-1">
                                             <!-- Days in a Row -->
                                             <div class="col">
-                                                <div class="d-flex">
-                                                    <img src="images/icons/thunder.svg" alt="">
-                                                    <p class="d-inline fw-bold">Days in a Row</p>
+                                                <div class="d-flex gap-3 flex-nowrap">
+                                                    <img class="img-fluid" width="36px" src="images/icons/thunder.svg"
+                                                        alt="">
+                                                    <h3 class="d-inline fw-bold">Days in a Row</h3>
                                                 </div>
                                             </div>
                                             <div class="col-auto">
                                                 <!-- Thunder Icon and Days Count -->
-                                                <span class="fw-bold px-1 py-1 rounded-pill"
-                                                    style="background-color: #FFF0C2;">
-                                                    <span class="fw-bold px-3 py-1 rounded-pill"
-                                                        style="background: #FECD34;">88</span>
+                                                <span class="fw-bold px-1 rounded-pill d-flex">
+                                                    <h3 class="d-inline bg-primary fw-bold px-3 py-1 rounded-pill">88
+                                                    </h3>
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div class="row mt-2">
                                             <!-- Days of the Week with Thunder Icon -->
-                                            <div class="d-flex justify-content-between px-3">
+                                            <div class="d-flex align-items-baseline justify-content-between px-3">
                                                 <!-- Day -->
                                                 <div>
                                                     <span class="d-block text-center mb-2">Mon</span>
                                                     <div class="bg-primary-second rounded-circle d-flex align-items-center justify-content-center"
                                                         style="width: 28px; height: 28px;">
                                                         <img class="bg-primary rounded-circle p-1"
-                                                            src="images/icons/thunder.svg"
-                                                            style="width: 24px; height: 24px;">
+                                                            src="images/icons/thunder.svg" width="36px">
                                                     </div>
                                                 </div>
                                                 <!-- Day -->
                                                 <div>
-                                                    <span class="d-block text-center mb-2">Thu</span>
+                                                    <span class="d-block text-center mb-2">Tue</span>
                                                     <div class="bg-primary-second rounded-circle d-flex align-items-center justify-content-center"
                                                         style="width: 28px; height: 28px;">
                                                         <img class="bg-primary rounded-circle p-1"
-                                                            src="images/icons/thunder.svg"
-                                                            style="width: 24px; height: 24px;">
+                                                            src="images/icons/thunder.svg" width="36px">
                                                     </div>
                                                 </div>
                                                 <!-- Day -->
@@ -352,42 +340,40 @@
                                                     <div class="bg-primary-second rounded-circle d-flex align-items-center justify-content-center"
                                                         style="width: 28px; height: 28px;">
                                                         <img class="bg-primary rounded-circle p-1"
-                                                            src="images/icons/thunder.svg"
-                                                            style="width: 24px; height: 24px;">
+                                                            src="images/icons/thunder.svg" width="36px">
                                                     </div>
                                                 </div>
                                                 <!-- Day -->
                                                 <div>
                                                     <div
                                                         class="bg-primary-second rounded-pill p-1 d-flex flex-column align-items-center justify-content-center">
-                                                        <span class="text-center fw-bold d-block mb-2">Thu</span>
+                                                        <span class="text-center fw-bold d-block mb-1">Thu</span>
                                                         <img class="bg-primary rounded-circle p-1"
-                                                            src="images/icons/thunder.svg"
-                                                            style="width: 24px; height: 24px;">
+                                                            src="images/icons/thunder.svg" width="36px">
                                                     </div>
                                                 </div>
                                                 <!-- Day -->
                                                 <div>
                                                     <span class="d-block text-center mb-2">Fri</span>
-                                                    <div class="rounded-circle p-1 border border-2"
+                                                    <div class="rounded-circle p-1 border border-3"
                                                         src="images/icons/thunder.svg"
-                                                        style="width: 24px; height: 24px;">
+                                                        style="width: 36px; height: 36px;">
                                                     </div>
                                                 </div>
                                                 <!-- Day -->
                                                 <div>
                                                     <span class="d-block text-center mb-2">Sat</span>
-                                                    <div class="rounded-circle p-1 border border-2"
+                                                    <div class="rounded-circle p-1 border border-3"
                                                         src="images/icons/thunder.svg"
-                                                        style="width: 24px; height: 24px;">
+                                                        style="width: 36px; height: 36px;">
                                                     </div>
                                                 </div>
                                                 <!-- Day -->
                                                 <div>
                                                     <span class="d-block text-center mb-2">Sun</span>
-                                                    <div class="rounded-circle p-1 border border-2"
+                                                    <div class="rounded-circle p-1 border border-3"
                                                         src="images/icons/thunder.svg"
-                                                        style="width: 24px; height: 24px;">
+                                                        style="width: 36px; height: 36px;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -401,9 +387,10 @@
                                             <div class="col">
                                                 <!-- Active Days -->
                                                 <div class="_active-days d-flex gap-3">
-                                                    <img src="images/icons/calenderWithBG.svg" alt="">
+                                                    <img class="img-fluid" width="50px"
+                                                        src="images/icons/calenderWithBG.svg" alt="">
                                                     <div>
-                                                        <span class="d-block fw-bold">178</span>
+                                                        <h3 class="fw-bold">178</h3>
                                                         <span>Active Days</span>
                                                     </div>
                                                 </div>
@@ -411,9 +398,10 @@
                                             <div class="col-auto">
                                                 <!-- Longest Steak -->
                                                 <div class="_active-days d-flex gap-3">
-                                                    <img src="images/icons/medal.svg" alt="">
+                                                    <img class="img-fluid" width="50px" src="images/icons/medal.svg"
+                                                        alt="">
                                                     <div>
-                                                        <span class="d-block fw-bold">90</span>
+                                                        <h3 class="fw-bold">90</h3>
                                                         <span>Longest Steak</span>
                                                     </div>
                                                 </div>
@@ -425,17 +413,15 @@
                         </div>
 
                         <!-- Offers Section -->
-                        <div class="row">
-                            <div class="container d-grid gap-2">
-                                <div class="row">
-                                    <p class="p-0 text-secondary-alt">offers</p>
-                                </div>
+                        <div class="row mt-2">
+                            <p class="p-0 text-secondary-alt">offers</p>
+                            <div class="container mt-2 d-grid gap-4">
                                 <div class="row">
                                     <!-- Go Premium Card -->
                                     <div class="container rounded p-4 bg-primary-second">
                                         <div class="row align-items-center">
                                             <div class="col-2">
-                                                <img class="w-100" src="images/offers/open-key.svg" alt="">
+                                                <img class="img-fluid" src="images/offers/open-key.svg" alt="">
                                             </div>
                                             <div class="col">
                                                 <h4 class="fw-bold">Go Premium</h4>
@@ -449,7 +435,7 @@
                                     <div class="container rounded p-4 bg-primary-alt">
                                         <div class="row align-items-center">
                                             <div class="col-2">
-                                                <img class="w-100" src="images/offers/merhaba.svg" alt="">
+                                                <img class="img-fluid" src="images/offers/merhaba.svg" alt="">
                                             </div>
                                             <div class="col">
                                                 <h4 class="fw-bold">Academy</h4>
@@ -463,9 +449,9 @@
                     </div>
                 </div>
             </div>
+            <div class="spacer"></div>
         </div>
         </div>
-
         <!-- Mobile Navigation -->
         <div class="container-fluid bg-white fixed-bottom w-100 d-block d-lg-none p-3 border-top">
             <div class="row flex-nowrap">

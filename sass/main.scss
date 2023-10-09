@@ -22,40 +22,18 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // import bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+:root {
+  --bs-body-font-family: "Roboto", sans-serif;
+}
+
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background: $light;
-  color: #4c3451;
   font-size: 1rem;
-}
-
-.navbar {
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.nav-link:hover {
-  background: #f1f2f5;
-  border-radius: 8px;
-  padding: 8px 16px;
-}
-
-.nav-link.active {
-  background: $primary-alt;
-  border-radius: 8px;
-  padding: 8px 16px;
-}
-._dropdown-item {
-  padding: 8px 16px;
-}
-
-._dropdown-item:hover {
-  background: $light-alt;
-  padding: 8px 16px;
 }
 
 p {
@@ -66,132 +44,6 @@ p {
   background-color: $light-alt !important;
 }
 
-// img {
-//   width: 100%;
-// }
-
-// @media (min-width: 576px) {
-//   body {
-//     font-size: 0.65rem;
-//   }
-// }
-
-// @media (min-width: 800px) {
-//   body {
-//     font-size: 0.7rem;
-//   }
-// }
-
-// @media (min-width: 1000px) {
-//   body {
-//     font-size: 0.8rem;
-//   }
-// }
-
-// @media (min-width: 1400px) {
-//   body {
-//     font-size: 1rem;
-//   }
-// }
-
-// @media (min-width: 1800px) {
-//   body {
-//     font-size: 1.2rem;
-//   }
-// }
-
-// @media (min-width: 2000px) {
-//   body {
-//     font-size: 1.4rem;
-//   }
-// }
-
-// @media (max-width: 1110px) {
-//   h4 {
-//     font-size: 1.2rem;
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   h1 {
-//     font-size: 1.5rem;
-//   }
-//   h2 {
-//     font-size: 1.25rem;
-//   }
-//   h3 {
-//     font-size: 1rem;
-//   }
-//   h4 {
-//     font-size: 0.75rem;
-//   }
-//   p {
-//     font-size: 0.5rem;
-//   }
-//   a {
-//     font-size: 0.5rem;
-//   }
-// }
-
-// @media (max-width: 992px) {
-//   h1 {
-//     font-size: 2rem;
-//   }
-//   h2 {
-//     font-size: 1.5rem;
-//   }
-//   h3 {
-//     font-size: 1.25rem;
-//   }
-//   h4 {
-//     font-size: 1rem;
-//   }
-//   p {
-//     font-size: 0.75rem;
-//   }
-//   a {
-//     font-size: 0.75rem;
-//   }
-// }
-
-// @media (max-width: 1200px) {
-//   h1 {
-//     font-size: 2.5rem;
-//   }
-//   h2 {
-//     font-size: 2rem;
-//   }
-//   h3 {
-//     font-size: 1.5rem;
-//   }
-//   h4 {
-//     font-size: 1.25rem;
-//   }
-//   p {
-//     font-size: 1rem;
-//   }
-//   a {
-//     font-size: 1rem;
-//   }
-// }
-
-// @media (min-width: 1200.1px) {
-//   h1 {
-//     font-size: 3rem;
-//   }
-//   h2 {
-//     font-size: 2.5rem;
-//   }
-//   h3 {
-//     font-size: 2rem;
-//   }
-//   h4 {
-//     font-size: 1.5rem;
-//   }
-//   p {
-//     font-size: 1.25rem;
-//   }
-//   a {
-//     font-size: 1.25rem;
-//   }
-// }
+.spacer {
+  margin-top: 100px;
+}
